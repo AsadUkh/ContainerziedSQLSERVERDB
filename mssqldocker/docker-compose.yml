@@ -12,4 +12,6 @@ services:
       MSSQL_PASSWORD: Password1!
     ports:
       - "1433:1433"
+    volumes:
+      - /home/asad/dbdata:/var/opt/mssql/data
     container_name: mssqldev
