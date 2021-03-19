@@ -1,0 +1,15 @@
+version: '3.2'
+
+services:
+  db:
+    build: .
+    image: asad/server:2017-latest-ubuntu
+    environment:
+      ACCEPT_EULA: Y
+      SA_PASSWORD: Password1!
+      MSSQL_DB: dev
+      MSSQL_USER: waqar
+      MSSQL_PASSWORD: Password1!
+    ports:
+      - "1433:1433"
+    container_name: mssqldev
